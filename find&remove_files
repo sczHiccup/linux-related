@@ -1,0 +1,16 @@
+touch {1..9}test.txt
+find *test.txt -exec rm -v {} \;
+
+#result:
+#removed '1test.txt'
+#removed '2test.txt'
+#removed '3test.txt'
+#removed '4test.txt'
+#removed '5test.txt'
+#removed '6test.txt'
+#removed '7test.txt'
+#removed '8test.txt'
+#removed '9test.txt'
+
+# 1. {} represents the found files
+# 2. content between '-exec' and '\;' is the operation on the 'find' result
